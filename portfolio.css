@@ -1,0 +1,27 @@
+/********Essential on all websites**********/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 80vw;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+  overflow: auto;
+}
+img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+body {
+  margin: 0;
+  background: #e4b6a2;
+  /* font-family: "Zen Kurenaido", sans-serif;
+  font-weight: 400; */
+}
