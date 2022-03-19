@@ -25,3 +25,19 @@ body {
   /* font-family: "Zen Kurenaido", sans-serif;
   font-weight: 400; */
 }
+/***********nav bar styling***************/
+nav {
+  margin: 10px;
+  height: 90px;
+  text-align: right;
+}
+nav a {
+  float: left;
+  font-size: 14px;
+  background-color: rgb(140, 78, 187);
+  border: 1px solid #090dc5;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
