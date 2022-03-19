@@ -55,21 +55,28 @@ nav a {
 .btn {
   text-decoration: none;
   padding: 15px 40px;
+
   background-color: aqua;
   color: white;
   border-radius: 40px;
   font-family: "Plateia", sans-serif;
   box-shadow: 0 10px 40px #4bcc3f;
   position: absolute;
+  background-repeat: no-repeat;
 
-  top: 60%; /*er ikke placeret rigtigt i mobile first*/
+  /*this is if we want a play button instead of the text button */
+  /* background-image: url(/images/playbutton.svg); */
+  /* width: 50%;
+  height: 50%; */
+
+  top: 50%; /*er ikke placeret rigtigt i mobile first*/
   left: 40%;
 }
 @media only screen and (max-width: 767px) {
   .btn {
     position: absolute;
     top: 70%;
-    left: 35%;
+    left: 45%;
   }
 }
 
