@@ -9,15 +9,23 @@
     <title>Teater GROB</title>
   </head>
   <body>
-    <nav>
-      <button><a href="portfolio.html">Portfolio</a></button>
-    </nav>
-
     <header>
+      <nav>
+        <button><a href="portfolio.html">Portfolio</a></button>
+      </nav>
       <div class="container">
         <section class="content">
           <h1>TEATER GROB</h1>
           <h2>Ud af det vanlige og ind i GROB</h2>
+
+          <div class="modal">
+            <a href="#" class="btn">Se video her</a>
+
+            <div class="video-container">
+              <span class="close">&#10006;</span>
+              <video src="randomvideo.MP4" controls></video>
+            </div>
+          </div>
         </section>
       </div>
     </header>
@@ -30,5 +38,21 @@
       </div>
     </main>
     <footer></footer>
+
+    <script>
+      const btn = document.querySelector(".btn");
+
+      const videoContainer = document.querySelector(".video-container");
+
+      const close = document.querySelector(".close");
+
+      btn.addEventListener("click", () => {
+        videoContainer.classList.add("show");
+      });
+
+      close.addEventListener("click", () => {
+        videoContainer.classList.remove("show");
+      });
+    </script>
   </body>
 </html>

@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 main {
@@ -50,6 +51,67 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
 }
+/*********Play button and video inside***********/
+.btn {
+  text-decoration: none;
+  padding: 15px 40px;
+  background-color: aqua;
+  color: white;
+  border-radius: 40px;
+  font-family: "Plateia", sans-serif;
+  box-shadow: 0 10px 40px #4bcc3f;
+  position: absolute;
+
+  top: 60%; /*er ikke placeret rigtigt i mobile first*/
+  left: 40%;
+}
+@media only screen and (max-width: 767px) {
+  .btn {
+    position: absolute;
+    top: 70%;
+    left: 35%;
+  }
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background-color: rgb(74, 74, 145);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.video-container .close {
+  position: absolute;
+  top: 10%;
+  right: 25px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.video-container video {
+  width: 90%;
+  max-width: 800px;
+  transform: scale(0);
+  box-shadow: 0 20px 20px blueviolet;
+  outline: none;
+  transition: all 0.3s;
+}
+.video-container.show {
+  pointer-events: all;
+  opacity: 1;
+}
+.video-container.show video {
+  transform: scale(1);
+}
+
 /********Fonts etc.(skabelon - change everything)*******/
 h1 {
   color: #000000;
