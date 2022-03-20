@@ -141,3 +141,28 @@ nav {
     left: 3em;
   }
 }
+.our-sketching {
+  background-color: var(
+    --clr-dark
+  ); /* placeholder picture if background picture doesnt show up */
+  background-image: url(images/ourprocess.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.section__title--sketching {
+  color: var(--clr-accent);
+  position: relative;
+}
+/*line under the h2 tag -pseudo element*/
+.section__title--sketching::after {
+  content: "";
+  display: block;
+  width: 3em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-light);
+  opacity: 0.25;
+}
