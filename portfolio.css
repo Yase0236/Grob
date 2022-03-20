@@ -216,3 +216,18 @@ nav {
   max-width: 1000px;
   margin: 0 auto;
 }
+@media (min-width: 600px) {
+  .campaign-vid {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas: "title img", "subtitle img", "text img";
+  }
+  .section__title--campaignvid,
+  .section__subtitle--campaignvid {
+    grid-column: 1;
+  }
+  .campain-vid__img {
+    grid-row: 1 / -1;
+    grid-column: 2;
+  }
+}
