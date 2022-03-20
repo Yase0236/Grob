@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/*custom properties - styletile*/
+/***********custom properties - styletile***********/
 :root {
   /* fonts */
   --ff-primary: "Roboto Mono", sans-serif;
@@ -35,7 +35,10 @@
   }
 }
 
-/*General styling*/
+/***********General styling***********/
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: var(--clr-light);
   color: var(--clr-dark);
@@ -61,7 +64,7 @@ strong {
   outline-offset: 3px;
 }
 
-/*button design*/
+/***********button design***********/
 .btn {
   display: inline-block;
   padding: 0.5em 2.5em;
@@ -79,7 +82,7 @@ strong {
 .btn:hover {
   transform: scale(1.1);
 }
-/*Typography*/
+/***********Typography***********/
 h1,
 h2,
 h3 {
@@ -125,7 +128,7 @@ p {
   margin-bottom: 2em;
 }
 
-/*header section*/
+/***********header section***********/
 header {
   display: flex;
   justify-content: space-between;
@@ -179,8 +182,25 @@ header {
   top: 1em;
   z-index: 1000;
 }
+.nav-open .nav {
+  transform: translateX(0);
+}
 
-/*hamburger section*/
+.nav-open .nav-toggle {
+  position: fixed;
+}
+/*rotate hamburger animation*/
+.nav-open .hamburger {
+  transform: rotate(0.625turn);
+}
+/*the rotate animation makes a weird x, so this is to make a prettier x*/
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+/**************hamburger section****************/
 
 /*making one line as the start of the hamburger*/
 .hamburger {
@@ -190,7 +210,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-  background: var(--clr-dark);
+  background: var(--clr-accent);
   width: 2em;
   height: 3px; /* the thickness of the lines */
   border-radius: 1em;
@@ -212,7 +232,7 @@ header {
   bottom: 6px;
 }
 
-/* Intro section */
+/***********Intro section***********/
 .intro {
   position: relative;
 }
@@ -300,7 +320,7 @@ header {
   }
 }
 
-/*campaign video section - here we write about the process of the campaign video*/
+/***********campaign video section - here we write about the process of the campaign video***********/
 .campaign-vid {
   max-width: 1000px;
   margin: 0 auto;
@@ -337,7 +357,7 @@ header {
     z-index: 2;
   }
 }
-/*portfolio sectionen*/
+/***********portfolio sectionen***********/
 .pictures {
   background-color: var(--clr-dark);
   color: var(--clr-light);
@@ -363,7 +383,7 @@ header {
   transform: scale(1.2);
   opacity: 0.75;
 }
-/*footer section*/
+/***********footer section***********/
 .footer {
   background: #111;
   color: var(--clr-accent);
