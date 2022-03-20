@@ -54,6 +54,31 @@ section {
 strong {
   font-weight: var(--fw-bold);
 }
+
+:focus {
+  /*on all links there will be a thick border around it to show you are about to press the button*/
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+/*button design*/
+.btn {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
 /*Typography*/
 h1,
 h2,
@@ -165,4 +190,29 @@ nav {
   margin: 0.5em auto 1em;
   background: var(--clr-light);
   opacity: 0.25;
+}
+.sketching {
+  margin-bottom: 4em;
+}
+.sketch {
+  /*keeping the three columns in a bigger screen*/
+  max-width: 500px;
+  margin: 0 auto;
+}
+@media (min-width: 800px) {
+  .sketching {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sketch + .sketch {
+    margin-left: 2em; /*making a space between the columns*/
+  }
+}
+
+/*campaign video section - here we write about the process of the campaign video*/
+.campaign-vid {
+  max-width: 1000px;
+  margin: 0 auto;
 }
