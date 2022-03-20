@@ -10,17 +10,158 @@
   </head>
   <body>
     <header>
-      <!-- Headeren usynlig indtil videre ellers skal der kun være et punkt som et portfolio punktet -->
-      <nav>
-        <button><a href="index.html">Forside</a></button>
+      <!-- Her kan vi overveje om vi skal have et logo til siden -->
+      <!-- <div class="logo">
+        <img src="" alt="">
+      </div> -->
+
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item">
+            <a href="#sketching" class="nav__link">The sketching fase</a>
+          </li>
+          <li class="nav__item">
+            <a href="#prototype" class="nav__link">Prototype</a>
+          </li>
+          <li class="nav__item">
+            <a href="#campaignvid" class="nav__link">Campaign video process</a>
+          </li>
+        </ul>
       </nav>
-      <div class="logo">
-        <img src="/images/groblogo.png" alt="" />
-      </div>
     </header>
-    <main>
-      <h1>Tom indtil videre</h1>
-    </main>
-    <footer></footer>
+
+    <!-- Introduction -->
+    <section class="intro" id="home">
+      <h1 class="section__title section__title--intro">
+        Hi, we are <strong>Group 5</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        Mariyah, Marie, Mathea, Jasmin
+      </p>
+      <img src="placeholder.jpg" alt="placeholder" class="intro__img" />
+    </section>
+
+    <!-- Our process (calling it sketching instead of our process)-->
+    <section class="our-sketching" id="sketching">
+      <h2 class="section__title section__title--sketching">Sketching fase</h2>
+      <div class="sketching">
+        <div class="sketch">
+          <h3>Moodboard</h3>
+          <p>This is where we are going to put the moodboard picture</p>
+          <p>Here we can write a little description of the process</p>
+        </div>
+        <div class="sketch">
+          <h3>Wireframe</h3>
+          <p>This is where we are going to put the wireframe picture</p>
+          <p>Here we can write a little description of the process</p>
+        </div>
+        <div class="sketch">
+          <h3>Styletile</h3>
+          <p>This is where we are going to put the moodboard picture</p>
+          <p>Here we can write a little description of the process</p>
+        </div>
+      </div>
+
+      <a href="#prototype" class="btn">Prototype</a>
+    </section>
+
+    <!-- Section about the prototype - skal ligne campaign video sectionen (ikke færdig) -->
+    <section class="prototype" id="prototype">
+      <h2 class="section__title">The prototype</h2>
+      <p class="section_subtitle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, error
+        unde accusamus odio harum consectetur illo! Quidem voluptatum obcaecati
+        odio.
+      </p>
+      <!-- add pictures of prototype here - skal evt. indsættes som galleriet nedenunder-->
+    </section>
+
+    <!-- Section about the campain video -->
+    <section class="campaign-vid" id="campaignvid">
+      <h2 class="section__title section__title--campaignvid">
+        Campaign video fase
+      </h2>
+      <p class="section__subtitle section__subtitle--campaignvid">
+        What's the catch?
+      </p>
+
+      <div class="campaign-vid__body">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, nisi.
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+          suscipit.
+        </p>
+      </div>
+
+      <img src="placeholder.jpg" alt="placeholder" />
+    </section>
+
+    <!-- Section about the video pictures -->
+    <section class="pictures">
+      <h3 class="section__title">Pictures</h3>
+      <p class="section_subtitle"></p>
+
+      <div class="portfolio">
+        <!-- portfolio item 1 -->
+        <a href="#" class="portfolio__item">
+          <!-- Her kan man erstatte placeholder billedet med hvad end man vil have på siden -->
+          <img src="placeholder.jpg" alt="" class="portfolio__img" />
+        </a>
+
+        <!-- portfolio item 2 -->
+        <a href="#" class="portfolio__item">
+          <!-- Her kan man erstatte placeholder billedet med hvad end man vil have på siden -->
+          <img src="placeholder.jpg" alt="" class="portfolio__img" />
+        </a>
+
+        <!-- portfolio item 3 -->
+        <a href="#" class="portfolio__item">
+          <!-- Her kan man erstatte placeholder billedet med hvad end man vil have på siden -->
+          <img src="placeholder.jpg" alt="" class="portfolio__img" />
+        </a>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer>
+      <!-- replace with something else (email, adresse, link til facebook/instagram) -->
+      <a href="billet@grob.dk" class="footer__link">billet@grob.dk</a>
+
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.instagram.com/teatergrob/"
+            >Instagram</a
+          >
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.facebook.com/teatergrob"
+            >Facebook</a
+          >
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://twitter.com/teatergrob"
+            >Twitter</a
+          >
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.youtube.com/channel/UCFMJLMumnaC1Y0mURsmPJOw"
+            >Youtube</a
+          >
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
