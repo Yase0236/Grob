@@ -275,6 +275,7 @@ header {
     left: 7.5em;
   }
 }
+/***************sketching fase*************/
 .our-sketching {
   background-color: var(
     --clr-dark
@@ -319,7 +320,11 @@ header {
     margin-left: 2em; /*making a space between the columns*/
   }
 }
-
+/* .sketch__img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+} */
 /***********campaign video section - here we write about the process of the campaign video***********/
 .campaign-vid {
   max-width: 1000px;
