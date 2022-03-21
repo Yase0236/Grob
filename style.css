@@ -1,83 +1,12 @@
-/********Essential on all websites**********/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-main {
-  width: 80vw;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 50px;
-  overflow: auto;
-}
 img {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-}
-/*******body styling************/
-body {
-  background-image: url(images/splashbillede.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  margin: 0;
-  background-color: #235b8f;
-}
-@media only screen and (max-width: 767px) {
-  body {
-    background-image: url(images/splashbillede.jpg);
-  }
-}
-/***********nav bar styling***************/
-nav {
-  margin: 10px;
-  height: 90px;
-  text-align: right;
-}
-nav a {
-  float: left;
-  font-size: 14px;
-  background-color: rgb(140, 78, 187);
-  border: 1px solid #090dc5;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-/*********Play button and video inside***********/
-.btn {
-  text-decoration: none;
-  padding: 15px 40px;
-
-  background-color: aqua;
-  color: white;
-  border-radius: 40px;
-  font-family: "Plateia", sans-serif;
-  box-shadow: 0 10px 40px #4bcc3f;
-  position: absolute;
-  background-repeat: no-repeat;
-
-  /*this is if we want a play button instead of the text button */
-  /* background-image: url(/images/playbutton.svg); */
-  /* width: 50%;
-  height: 50%; */
-
-  top: 50%; /*er ikke placeret rigtigt i mobile first*/
-  left: 40%;
-}
-@media only screen and (max-width: 767px) {
-  .btn {
-    position: absolute;
-    top: 70%;
-    left: 45%;
-  }
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .video-container {
@@ -87,7 +16,7 @@ nav a {
   width: 100%;
   height: 100%;
   z-index: 99999;
-  background-color: rgb(74, 74, 145);
+  background-color: rgba(0, 0, 0, 0.89);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,14 +29,12 @@ nav a {
   position: absolute;
   top: 10%;
   right: 25px;
+  color: white;
   font-size: 25px;
   cursor: pointer;
 }
 .video-container video {
-  width: 90%;
-  max-width: 800px;
-  transform: scale(0);
-  box-shadow: 0 20px 20px blueviolet;
+  width: 100%;
   outline: none;
   transition: all 0.3s;
 }
@@ -119,38 +46,93 @@ nav a {
   transform: scale(1);
 }
 
-/********Fonts etc.(skabelon - change everything)*******/
-h1 {
-  color: #ffffff;
-  font-family: "Plateia", monospace;
-  text-align: center;
-  font-size: 3rem;
-}
-h2 {
-  color: #ffffff;
-  font-family: "Plateia", monospace;
-  font-size: 1rem;
-  text-align: center;
-}
-h3 {
-  color: #ffffff;
-  font-family: "Plateia", monospace;
-  font-size: 0.75rem;
-}
-p {
-  font-family: "Zen Kurenaido", monospace;
-  color: rgb(0, 0, 0);
-  font-size: 1rem;
-}
-/********container for index(her ligger splashbillede og h tags ovenpå billedet)*********/
-.container {
-  display: table;
-  padding-top: 80px;
-  width: 100%;
+.image {
+  max-width: 100%;
+  aspect-ratio: 16/11;
+  object-fit: cover;
 }
 
-.content {
-  display: table-cell;
-  vertical-align: middle;
+.btn-icon {
+  height: 4%;
+  position: absolute;
+  top: 26%;
+  left: 75%;
+}
+
+button a {
+  font-size: 0.6rem;
   text-align: center;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+button {
+  float: left;
+  background-color: #372d6c;
+  border: none;
+  padding: 7px;
+  margin: 10px 10px;
+  border-radius: 13px;
+  position: absolute;
+}
+
+h1 {
+  position: absolute;
+  top: 4%;
+  left: 47%;
+  font-size: 2rem;
+  font-family: lft-etica-compressed;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h2 {
+  position: absolute;
+  top: 10%;
+  left: 47%;
+  font-size: 1rem;
+  font-family: lft-etica-compressed, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+h3 {
+  padding: 15px;
+  font-size: 0.9rem;
+  font-family: lft-etica, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h6 {
+  position: absolute;
+  top: 24%;
+  left: 78%;
+  font-size: 0.55rem;
+  font-family: lft-etica, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.content2 {
+  max-width: 1000px;
+  height: 300px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.content3 {
+  max-width: 1000px;
+  height: 700px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  background-color: #f8b647;
+}
+.content4 {
+  max-width: 1000px;
+  height: 200px;
+  gap: 10px;
 }
