@@ -151,7 +151,7 @@ p {
 }
 
 .splash-section {
-  background-image: url("/Grob/images/splashbillede.png");
+  background-image: url("/images/splashbillede.png");
   background-size: cover;
   background-position: 35% 0%;
   height: 80vh;
@@ -281,7 +281,7 @@ p {
   }
 
   .splash-section {
-    background-image: url("/Grob/images/splashbillede.png");
+    background-image: url("images/splashbillede.png");
     background-size: cover;
     background-position: bottom;
     height: 100vh;
@@ -315,14 +315,6 @@ p {
 @media (min-width: 900px) {
   .container {
     max-width: 1000px;
-  }
-
-  .splash-section {
-    background-image: url("/Grob/images/splashbillede.png");
-    background-size: cover;
-    background-position: bottom;
-    height: 100vh;
-    padding-top: 16px;
   }
 
   h1 {
