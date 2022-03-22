@@ -115,6 +115,7 @@ p {
 .section__subtitle {
   margin: 0;
   font-size: var(--fs-h3);
+  color: var(--clr-medium);
 }
 .section__subtitle--intro,
 .section__subtitle--campaignvid {
@@ -284,7 +285,7 @@ header {
   background-image: url(images/ourprocess.jpg);
   background-size: cover;
   background-blend-mode: multiply;
-  color: var(--clr-dark);
+  color: var(--clr-medium);
   text-align: center;
 }
 
