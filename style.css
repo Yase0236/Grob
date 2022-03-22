@@ -6,7 +6,16 @@
 
 img {
   max-width: 100%;
-  max-height: 100%;
+  display: block;
+  height: auto;
+}
+
+.container {
+  max-width: 800px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .video-container {
@@ -46,93 +55,286 @@ img {
   transform: scale(1);
 }
 
-.image {
-  max-width: 100%;
-  aspect-ratio: 16/11;
-  object-fit: cover;
-}
-
-.btn-icon {
-  height: 4%;
-  position: absolute;
-  top: 26%;
-  left: 75%;
-}
-
-button a {
-  font-size: 0.6rem;
+.btn-purple {
+  background-color: #372d6c;
+  border: none;
+  padding: 7px;
+  border-radius: 13px;
+  font-size: 0.8rem;
   text-align: center;
   color: rgb(255, 255, 255);
   text-decoration: none;
   text-transform: uppercase;
-}
-
-button {
-  float: left;
-  background-color: #372d6c;
-  border: none;
-  padding: 7px;
-  margin: 10px 10px;
-  border-radius: 13px;
-  position: absolute;
+  font-family: lft-etica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 h1 {
-  position: absolute;
-  top: 4%;
-  left: 47%;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: lft-etica-compressed;
   font-weight: 700;
   font-style: italic;
+  margin-top: 30px;
 }
 
 h2 {
-  position: absolute;
-  top: 10%;
-  left: 47%;
-  font-size: 1rem;
-  font-family: lft-etica-compressed, sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-h3 {
-  padding: 15px;
   font-size: 0.9rem;
   font-family: lft-etica, sans-serif;
   font-weight: 700;
   font-style: italic;
+  margin-bottom: 15px;
 }
 
-h6 {
-  position: absolute;
-  top: 24%;
-  left: 78%;
-  font-size: 0.55rem;
+p {
+  font-size: 0.9rem;
+  font-family: lft-etica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.content2 p {
+  background-color: white;
+  max-width: 300px;
+  padding: 10px;
+}
+
+.splash-section h2 {
+  font-size: 1.3rem;
+  font-family: lft-etica-compressed;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.btn-video-txt,
+.btn-kort p {
+  font-size: 0.7rem;
   font-family: lft-etica, sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
-.content2 {
-  max-width: 1000px;
-  height: 300px;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.btn-kort {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.content3 {
-  max-width: 1000px;
-  height: 700px;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
+.section-orange {
   background-color: #f8b647;
 }
-.content4 {
-  max-width: 1000px;
-  height: 200px;
-  gap: 10px;
+
+.section {
+  padding-top: 35px;
+  padding-bottom: 60px;
+}
+
+.btn-video {
+  border-style: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.btn-video svg {
+  width: 60px;
+  height: auto;
+}
+
+.splash-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.splash-section {
+  background-image: url("/Grob/images/splashbillede.png");
+  background-size: cover;
+  background-position: 35% 0%;
+  height: 80vh;
+  padding-top: 16px;
+}
+
+.splash-header img {
+  width: 50px;
+}
+
+.splash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.content {
+  display: grid;
+  gap: 20px;
+  justify-items: start;
+}
+
+.content img {
+  width: 100%;
+  max-width: 700px;
+}
+
+.btn-pink {
+  background-color: #f050c1;
+  border: none;
+  padding: 7px;
+  border-radius: 13px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #f8b647;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: lft-etica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.txt-fat {
+  font-weight: 700;
+}
+
+.txt-pink {
+  color: #f050c1;
+  font-weight: 700;
+}
+
+.content2 {
+  display: grid;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.content2 button {
+  background-color: #372d6c;
+  border: none;
+  padding: 7px;
+  border-radius: 13px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #f8b647;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: lft-etica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.form {
+  display: grid;
+  gap: 18px;
+  padding: 16px;
+  border: 2px solid #ffffff;
+  max-width: 300px;
+}
+
+.form input {
+  width: 100%;
+  color: #000000;
+  font-style: italic;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  font-weight: bold;
+  border: none;
+}
+
+.content3 {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+}
+
+.content3 p {
+  margin-bottom: 20px;
+}
+
+.content3 img {
+  max-width: 100px;
+}
+
+.content3 span {
+  font-weight: 700;
+}
+
+@media (min-width: 600px) {
+  .content2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
+
+  .splash-section {
+    background-image: url("/Grob/images/splashbillede.png");
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    padding-top: 16px;
+  }
+
+  h1 {
+    font-size: 4rem;
+    margin-top: 30px;
+  }
+  .splash-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .btn-video-txt,
+  .btn-kort p {
+    font-size: 0.8rem;
+    font-family: lft-etica, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .btn-pink {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .splash-section {
+    background-image: url("/Grob/images/splashbillede.png");
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    padding-top: 16px;
+  }
+
+  h1 {
+    font-size: 5rem;
+    margin-top: 30px;
+  }
+  .splash-section h2 {
+    font-size: 2rem;
+  }
+
+  .btn-video svg {
+    width: 70px;
+    height: auto;
+  }
 }
