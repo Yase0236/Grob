@@ -13,10 +13,11 @@
   /* font weight */
   --fw-reg: 300;
   --fw-bold: 900;
-  /* font color */
+  /* font and background colors */
   --clr-light: #ffffff;
-  --clr-dark: #363231;
-  --clr-accent: #ffff03;
+  --clr-dark: #372d6c;
+  --clr-medium: #f8b647;
+  --clr-accent: #f161c7;
   /* font size */
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -69,7 +70,7 @@ strong {
   display: inline-block;
   padding: 0.5em 2.5em;
   background: var(--clr-accent);
-  color: var(--clr-dark);
+  color: var(--clr-medium);
   text-decoration: none;
   cursor: pointer;
   font-size: 0.8em;
@@ -139,8 +140,8 @@ header {
 }
 .nav {
   position: fixed;
-  background: var(--clr-dark);
-  color: var(--clr-light);
+  background: var(--clr-medium);
+  color: var(--clr-accent);
   top: 0;
   bottom: 0;
   left: 0;
@@ -278,17 +279,17 @@ header {
 /***************sketching fase*************/
 .our-sketching {
   background-color: var(
-    --clr-dark
+    --clr-accent
   ); /* placeholder picture if background picture doesnt show up */
   background-image: url(images/ourprocess.jpg);
   background-size: cover;
   background-blend-mode: multiply;
-  color: var(--clr-light);
+  color: var(--clr-dark);
   text-align: center;
 }
 
 .section__title--sketching {
-  color: var(--clr-accent);
+  color: var(--clr-dark);
   position: relative;
 }
 /*line under the h2 tag -pseudo element*/
@@ -364,8 +365,8 @@ header {
 }
 /***********portfolio sectionen***********/
 .pictures {
-  background-color: var(--clr-dark);
-  color: var(--clr-light);
+  background-color: var(--clr-medium);
+  color: var(--clr-dark);
   text-align: center;
 }
 .portfolio {
@@ -373,7 +374,7 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .portfolio__item {
-  background: var(--clr-dark); /* (can also be changed to the other colors) */
+  background: var(--clr-accent); /* (can also be changed to the other colors) */
   overflow: hidden;
 }
 .portfolio__img {
