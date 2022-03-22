@@ -7,25 +7,27 @@
 
 /***********custom properties - styletile***********/
 :root {
-  /* fonts */
+  /**fonts**/
   --ff-primary: "LFT Etica compressed", sans-serif;
   --ff-secondary: "LFT Etica", sans-serif;
-  /* font weight */
+  /**font weight**/
   --fw-reg: 300;
   --fw-bold: 900;
-  /* font color */
+  /**font and background colors**/
   --clr-light: #ffffff;
-  --clr-dark: #363231;
-  --clr-accent: #ffff03;
-  /* font size */
+  --clr-dark: #372d6c;
+  --clr-medium: #f8b647;
+  --clr-accent: #f161c7;
+  /**font sizes**/
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
-
+  /**box shadow**/
   --bs: 0.25em 0.25em 0.77em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
+/**desktop version**/
 @media (min-width: 800px) {
   :root {
     --fs-h1: 4rem;
@@ -36,6 +38,7 @@
 }
 
 /***********General styling***********/
+/*So it doesnt jump when you scroll or click in the burger menu*/
 html {
   scroll-behavior: smooth;
 }
@@ -59,7 +62,7 @@ strong {
 }
 
 :focus {
-  /*on all links there will be a thick border around it to show you are about to press the button*/
+  /*on all links there will be a thick border around it to show you pressed the button*/
   outline: 3px solid var(--clr-accent);
   outline-offset: 3px;
 }
@@ -69,10 +72,10 @@ strong {
   display: inline-block;
   padding: 0.5em 2.5em;
   background: var(--clr-accent);
-  color: var(--clr-dark);
+  color: var(--clr-medium);
   text-decoration: none;
   cursor: pointer;
-  font-size: 0.8em;
+  font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--fw-bold);
@@ -101,7 +104,7 @@ h3 {
 p {
   font-size: var(--fs-body);
 }
-
+/***************section styling*****************/
 .section__title {
   margin-bottom: 0.25em;
 }
@@ -114,6 +117,7 @@ p {
 .section__subtitle {
   margin: 0;
   font-size: var(--fs-h3);
+  color: var(--clr-medium);
 }
 .section__subtitle--intro,
 .section__subtitle--campaignvid {
@@ -135,19 +139,19 @@ header {
   padding: 1em;
 }
 .logo {
-  max-width: 150px;
+  max-width: 200px;
 }
 .nav {
   position: fixed;
-  background: var(--clr-dark);
-  color: var(--clr-light);
+  background: var(--clr-medium);
+  color: var(--clr-accent);
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 100;
 
-  /*moving the nav off the screen if at 100% and moving it to half of the screen if at 50% - 0% makes it easier to style it for now*/
+  /*moving the nav off the screen if at 100% and moving it to half of the screen if at 50% - 0% makes it easier to style it*/
   transform: translateX(100%);
   transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
 }
@@ -161,7 +165,7 @@ header {
   margin: 0;
   padding: 0;
 }
-
+/*Color inherit - inherited from the element's parent*/
 .nav__link {
   color: inherit;
   font-weight: var(--fw-bold);
@@ -239,10 +243,11 @@ header {
 .intro__img {
   box-shadow: var(--bs);
 }
+/*Property used to display an element as a inline-level block container*/
 .section__subtitle--intro {
   display: inline-block;
 }
-
+/*Grid template areas - specifies areas within the grid layout*/
 @media (min-width: 600px) {
   .intro {
     display: grid;
@@ -252,6 +257,7 @@ header {
     grid-template-areas: "img title" "img subtitle";
     grid-template-columns: min-content max-content;
   }
+  /*grid area - specifies a grid item's size and location within a grid (the edges of its grid area)*/
   .intro__img {
     box-shadow: var(--bs);
     grid-area: img;
@@ -272,23 +278,23 @@ header {
 
 @media (min-width: 600px) {
   .section__subtitle--intro {
-    left: 7.5em;
+    left: 4.5em;
   }
 }
 /***************sketching fase*************/
 .our-sketching {
   background-color: var(
-    --clr-dark
-  ); /* placeholder picture if background picture doesnt show up */
+    --clr-accent
+  ); /* placeholder color if background picture doesnt show up on certain computers or while the picture loads */
   background-image: url(images/ourprocess.jpg);
   background-size: cover;
   background-blend-mode: multiply;
-  color: var(--clr-light);
+  color: var(--clr-medium);
   text-align: center;
 }
 
 .section__title--sketching {
-  color: var(--clr-accent);
+  color: var(--clr-dark);
   position: relative;
 }
 /*line under the h2 tag -pseudo element*/
@@ -305,7 +311,7 @@ header {
   margin-bottom: 4em;
 }
 .sketch {
-  /*keeping the three columns in a bigger screen*/
+  /*keeping the three columns on a bigger screen*/
   max-width: 500px;
   margin: 0 auto;
 }
@@ -325,7 +331,7 @@ header {
   height: 100px;
   background-size: cover;
 } */
-/***********campaign video section - here we write about the process of the campaign video***********/
+/***********campaign video section - the process of the campaign video***********/
 .campaign-vid {
   max-width: 1000px;
   margin: 0 auto;
@@ -346,6 +352,7 @@ header {
   .section__title--campaignvid {
     grid-area: title;
   }
+  /*Calc() - lets you perform calculation when specifying css property values. (Funktionen tager et enkelt udtryk som sin parameter med udtrykkets resultat som er brugt som værdi)*/
   .section__subtitle--campaignvid {
     /*making sure the text on the colored bar will never touch the image*/
     grid-column: 1/-1;
@@ -364,8 +371,8 @@ header {
 }
 /***********portfolio sectionen***********/
 .pictures {
-  background-color: var(--clr-dark);
-  color: var(--clr-light);
+  background-color: var(--clr-medium);
+  color: var(--clr-dark);
   text-align: center;
 }
 .portfolio {
@@ -373,7 +380,7 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .portfolio__item {
-  background: var(--clr-dark); /* (can also be changed to the other colors) */
+  background: var(--clr-accent); /* (can also be changed to the other colors) */
   overflow: hidden;
 }
 .portfolio__img {
