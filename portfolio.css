@@ -286,7 +286,7 @@ header {
   background-color: var(
     --clr-accent
   ); /* placeholder color if background picture doesnt show up on certain computers or while the picture loads */
-  background-image: url(images/ourprocess.jpg);
+  background-image: url(images/ourprocess.webp);
   background-size: cover;
   background-blend-mode: multiply;
   color: var(--clr-medium);

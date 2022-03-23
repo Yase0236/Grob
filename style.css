@@ -151,7 +151,7 @@ p {
 }
 
 .splash-section {
-  background-image: url("images/splashbillede.png");
+  background-image: url("images/splashbillede.webp");
   background-size: cover;
   background-position: 35% 0%;
   height: 80vh;
@@ -285,7 +285,7 @@ p {
   }
 
   .splash-section {
-    background-image: url("images/splashbillede.png");
+    background-image: url("images/splashbillede.webp");
     background-size: cover;
     background-position: bottom;
     height: 100vh;
@@ -322,7 +322,7 @@ p {
   }
 
   .splash-section {
-    background-image: url("images/splashbillede.png");
+    background-image: url("images/splashbillede.webp");
     background-size: cover;
     background-position: bottom;
     height: 100vh;
