@@ -370,8 +370,7 @@ header {
   }
 }
 
-.video_container,
-.videos {
+.videos_container {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
